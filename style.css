@@ -29,6 +29,21 @@ section{
 section:nth-child(even){
     background: #eee  ;
 }
+
+.sub-heading{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    color: var(--black);
+}
 header{
     position: fixed;
     top: 0;
@@ -188,23 +203,76 @@ padding: .8rem 3rem;
     background: var(--green);
     letter-spacing: .1rem;
 }
+.swiper-pagination-bullet-active{
+    background: var(--green);
+}
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28rem,1fr));
+    gap: 1.5rem;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.dishes .box-container .box{
+    padding: 2rem;
+    background: #fff;
+    border-radius:.5rem;
+    box-shadow: var(--box-shadow);
+    border : 1rem solid rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.dishes .box-container .box .fa-heart,
+.dishes .box-container .box .fa-eye{
+    position: absolute;
+    top: 1.5rem;
+    background: #eee;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+.dishes .box-container .box .fa-heart:hover,
+.dishes .box-container .box .fa-eye:hover{
+    background: var(--green);
+    color: #fff;
+}
+.dishes .box-container .box .fa-heart{
+    right: -15rem;
+}
+.dishes .box-container .box .fa-eye{
+    left: -15rem;
+}
+.dishes .box-container .box:hover .fa-heart{
+    right: 1.5rem;
+}
+.dishes .box-container .box:hover .fa-eye{
+    left: 1.5rem;
+}
+.dishes .box-container .box img{
+    height: 17rem;
+    margin: 1rem 0;
+}
+.dishes .box-container .box h3{
+  color: var(--black);
+  font-size: 2.5rem;
+}
+.dishes .box-container .box .stars{
+    padding: 1rem 0;
+  }
+  .dishes .box-container .box .stars i{
+    font-size: 1.7rem;
+    color: var(--green);
+  }
+  .dishes .box-container .box span{
+    color: var(--green);
+    font-weight: bolder;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+  }
 
 
 
@@ -236,6 +304,10 @@ padding: .8rem 3rem;
     header{
         padding: 1rem 2rem;
     }
+    section{
+        padding:  2rem;
+    }
+
 
 }
 
@@ -268,10 +340,17 @@ padding: .8rem 3rem;
         width: 90%;
        margin: 0 1rem;
 }
+.home .home-slider .slide .content h3{
+    font-size: 5rem;
+}
 }
 @media  only screen and (max-width:991px){
     html{
         font-size: 50%;
+    }
+    .dishes .box-container .box img{
+        height: auto;
+        width: 100%;
     }
 
 }
