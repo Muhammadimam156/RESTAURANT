@@ -17,11 +17,20 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="loader()">
+<!-- loader parts  -->
+
+<div class="loader-container" id="loader-container">
+  <img src="img/loader-2_food.gif" alt="">
+   </div>
+ <!-- loader ends -->
+
+ <!-- header starts -->
+
     <header>
       <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a>
       <nav class="navbar">
-        <a href="#home" class="active">home</a>
+        <a class="active" href="#home" >home</a>
         <a href="#dishes">dishes</a>
         <a href="#about">about</a>
         <a href="#menu">menu</a>
@@ -664,7 +673,17 @@
     </section>
    <!-- footer section ends -->
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var loading = document.getElementById("loader-container");
+      function loader(){
+        setTimeout( ()=>{
+           loading.style.display = "none";
+        },3000)
+      }
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
